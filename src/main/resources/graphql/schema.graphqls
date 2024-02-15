@@ -1,0 +1,32 @@
+type Query {
+    guests: [Guest]
+    hotelRooms: [HotelRoom]
+    bookings: [Booking]
+}
+
+type Booking {
+    id: ID
+    room: HotelRoom
+    guest: Guest
+    checkInFrom: String
+    checkInTo: String
+    checkOutFrom: String
+    checkOutTo: String
+    requests: String
+    internalNote: String
+}
+
+
+type HotelRoom {
+    id: ID
+    type: String
+    description: String
+}
+
+type Guest {
+    id: ID
+    firstName: String
+    lastName: String
+    email: String
+    address: String
+}
